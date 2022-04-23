@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #191816;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.container {
+    margin: auto;
+    border: 1px solid red;
+    display: flex;
+    margin-top: 100px;
+    width: auto;
+    height: auto;
+    background-color: #24221F;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFC632;
+    border-radius: 5px;
+    padding: 15px 100px;
+}
+
+

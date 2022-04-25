@@ -1,9 +1,14 @@
+* {
+    font-size: 62,50%;
+}
+
 body {
     margin: 0;
     padding: 0;
     display: flex;
     background-color: #191816;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
     color: white;
 }
 
@@ -14,7 +19,6 @@ body {
 
 .container {
     margin: auto;
-    /* border: 1px solid red; */
     display: flex;
     margin-top: 200px;
     margin-left: -110px;
@@ -28,9 +32,8 @@ body {
 }
 
 form {
-    /* border: 1px solid red; */
     margin: auto;
-    line-height: 30px;
+    line-height: 50px;
 }
 
 button {
@@ -40,6 +43,7 @@ button {
     background-color: #FFC632;
     border-radius: 5px;
     padding: 15px 140px;
+    border-style: none;
 }
 
 a {
@@ -47,28 +51,42 @@ a {
     color: #FFC632;
 }
 
-.email input {
-    width: 330px;
-    height: 30px;
-    border-radius: 5px;
+.email {
+    line-height: 10px;
 }
 
 .mail {
-    background-image: url(./images/mail.svg);
-    background-repeat: no-repeat;
-    text-align: center;
-}
-
-.pass {
-    background-image: url(./images/lock.svg);
-    background-repeat: no-repeat;
-    text-align: center;
-}
-
-.senha input {
     width: 330px;
     height: 30px;
     border-radius: 5px;
+    background-image: url(./images/mail.svg);
+    background-repeat: no-repeat;
+    text-align: center;
+    border-style: none;
+}
+
+.mail:focus-within {
+    background-image: url(./images/mail-focus.svg);
+    border-color: #FFC632;
+}
+
+.senha {
+    line-height: 10px;
+}
+
+.pass {
+    width: 330px;
+    height: 30px;
+    border-radius: 5px;
+    background-image: url(./images/lock.svg);
+    background-repeat: no-repeat;
+    text-align: center;
+    border-style: none;
+}
+
+.pass:focus-within {
+    background-image: url(./images/lock-focus.svg);
+    border-color: #FFC632;
 }
 
 .registro {
@@ -78,6 +96,3 @@ a {
 .checkbox a {
     text-align: right;
 }
-
-/* colocar imagens no input
-verificar como tirar a imagem e ficar só com o formulário no cel */

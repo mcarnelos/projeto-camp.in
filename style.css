@@ -1,98 +1,222 @@
+/* Mobile */
+:root {
+    font-size: 62.50%;
+
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secundary: 'Roboto', sans-serif;
+
+    --bg-primary: #191816;
+    --bg-form: #24221F;
+}
+
 * {
-    font-size: 62,50%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    background-color: #191816;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1rem;
-    color: white;
+    background: var(--bg-primary);
 }
 
-.logo {
-    margin-top: 20px;
-    margin-left: 20px;
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: auto;
+    width: 37.5rem;
 }
 
 .container {
-    margin: auto;
-    display: flex;
-    margin-top: 200px;
-    margin-left: -110px;
-    background-color: #24221F;
-    height: 512px;
-    width: 572px;
+    margin-inline: 2rem;
+}
+
+.logo {
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
 }
 
 .logo-seta {
     display: flex;
-}
-
-form {
-    margin: auto;
-    line-height: 50px;
-}
-
-button {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #FFC632;
-    border-radius: 5px;
-    padding: 15px 140px;
-    border-style: none;
+    gap: 1rem;
 }
 
-a {
-    text-decoration: none;
+h1 {
+    font-family: var(--ff-primary);
+    font-size: 2.4rem;
+    font-weight: 600;
+
+    color: #D4CCB6;
+
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    margin-bottom: 2.7rem;
+}
+
+h2, 
+label {
+    font-family: var(--ff-secundary);
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    color: #AFB6C2;
+}
+
+.checkbox label {
+    font-family: var(--ff-secundary);
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    color: #A9AFB9;
+}
+
+.checkbox a {
+    font-family: var(--ff-secundary);
+    font-size: 1.4rem;
+    font-weight: 400;
+
     color: #FFC632;
+
+    text-decoration: none;
 }
 
-.email {
-    line-height: 10px;
+.registro a {
+    font-family: var(--ff-secundary);
+    font-size: 1.4rem;
+
+    color: #FFC632;
+
+    text-decoration: none;
 }
 
-.mail {
-    width: 330px;
-    height: 30px;
-    border-radius: 5px;
-    background-image: url(./images/mail.svg);
-    background-repeat: no-repeat;
-    text-align: center;
-    border-style: none;
+.email input,
+.password input {
+    background: url(./images/mail.svg) no-repeat left;
+    background-color: var(--ff-primary);
+
+    width: 33.5rem;
+    height: 4.4rem;
+    left: 2rem;
+    top: 21.8rem;
+
+    border: 1px solid #868686;
+    border-radius: 0.4rem;
+
+    padding-left: 2.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 
-.mail:focus-within {
-    background-image: url(./images/mail-focus.svg);
-    border-color: #FFC632;
+.email input:focus {
+    background: url(./images/mail-focus.svg) no-repeat left;
 }
 
-.senha {
-    line-height: 10px;
+.password input {
+    background: url(./images/lock.svg) no-repeat left;
 }
 
-.pass {
-    width: 330px;
-    height: 30px;
-    border-radius: 5px;
-    background-image: url(./images/lock.svg);
-    background-repeat: no-repeat;
-    text-align: center;
-    border-style: none;
+.password input:focus {
+    background: url(./images/lock-focus.svg) no-repeat left;
 }
 
-.pass:focus-within {
-    background-image: url(./images/lock-focus.svg);
-    border-color: #FFC632;
+input {
+    font-family: var(--ff-secundary);
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    color: #A9AFB9;
+}
+
+.checkbox {
+    margin-bottom: 2rem;
+}
+
+.checkbox a {
+    margin-left: 10rem;
+}
+
+#button {
+    font-family: var(--ff-secundary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.015em;
+
+    text-transform: uppercase;
+
+    color: #473404;
+
+    background: #FFC632;
+
+    width: 33.4rem;
+    height: 5.1rem;
+
+    border-radius: 0.4rem;
+
+    cursor: pointer;
+
+    margin-bottom: 1.4rem;
 }
 
 .registro {
     text-align: center;
 }
 
-.checkbox a {
-    text-align: right;
+.carro {
+    display: none;
+} 
+
+/* Desktop ***************/
+
+@media (min-width: 1200px) {
+
+    .logo {
+        margin-left: 4rem;
+        margin-top: 4rem;
+    }
+
+    .page {
+        width: 100%;
+    }
+
+    .container {
+        background: #24221F;
+
+        padding-top: 5.5rem;
+        padding-left: 12rem;
+        padding-bottom: 3.5rem;
+
+        margin-inline: 5rem;
+        margin-block: 12.4rem;
+
+        width: 57.2rem;
+        height: 51.2rem;
+        left: 7.4rem;
+        top: 19.4rem;
+    }
+
+    .email label, 
+    .password label {
+        display: flex;
+    }
+
+    .registro {
+       margin-left: -12rem;
+    }
+    
+    .carro {
+        display: initial;
+
+        margin-left: 50%;
+        margin-top: -88rem;
+    }
+
+    img {
+        width: 50vw;
+    }
 }
+
